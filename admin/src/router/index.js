@@ -15,6 +15,7 @@ const routes = [
     redirect: '/welcome',
     children: [
       { path: '/welcome', component: Welcome, name: 'welcome' },
+      { path: '/categories/edit/:id', component: Create, props: true },
       { path: '/categories/create', component: Create, name: 'create' },
       { path: '/categories/list', component: List, name: 'list' }
     ]
