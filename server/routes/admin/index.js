@@ -9,7 +9,7 @@ module.exports = app => {
   })
   // 获取分类
   router.get('/categories', async (req, res) => {
-    const items = await Category.find().limit(10)
+    const items = await Category.find().populate('parent').limit(10)
     res.send(items)
   })
   // 获取分类详情根据id
@@ -21,6 +21,13 @@ module.exports = app => {
   router.put('/categories/:id', async (req, res) => {
     const model = await Category.findByIdAndUpdate(req.params.id, req.body)
     res.send(model)
+  })
+  // 根据id删除分类
+  router.delete('/categories/:id', async (req, res) => {
+    await Category.findByIdAndDelete(req.params.id, req.body)
+    res.send({
+      success: true
+    })
   })
   app.use('/admin/api', router)
 }
