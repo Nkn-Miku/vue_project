@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-card>
     <h1>{{id ? '编辑':'新建'}}分类</h1>
     <el-form label-width="120px" @submit.native.prevent="save">
       <el-form-item label="上级分类">
@@ -15,6 +16,7 @@
         <el-button type="primary" native-type="submit">立即创建</el-button>
       </el-form-item>
     </el-form>
+    </el-card>
   </div>
 </template>
 

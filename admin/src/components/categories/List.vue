@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-card>
     <h1>分类标签</h1>
     <el-table :data="listData" style="width: 100%">
       <el-table-column prop="_id" label="id" width="350px">
@@ -15,6 +16,7 @@
         </template>
       </el-table-column>
     </el-table>
+    </el-card>
   </div>
 </template>
 

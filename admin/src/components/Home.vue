@@ -9,10 +9,14 @@
               <i class="el-icon-message"></i>内容管理
             </template>
             <el-menu-item-group>
-            <template slot="title">分类</template>
-            <el-menu-item index="/categories/create">新建分类</el-menu-item>
-            <el-menu-item index="/categories/list">分类列表</el-menu-item>
-          </el-menu-item-group>
+              <template slot="title">分类</template>
+              <el-menu-item index="/categories/create">新建分类</el-menu-item>
+              <el-menu-item index="/categories/list">分类列表</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group>
+              <template slot="title">文章</template>
+              <el-menu-item index="/article/createArticle">新建文章</el-menu-item>
+            </el-menu-item-group>
           </el-submenu>
         </el-menu>
       </el-aside>
